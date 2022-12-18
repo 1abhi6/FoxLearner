@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container" id="home">
+            <a class="navbar-brand" href=""> <img src="{{url_for('static',filename='assets/img/logo.png')}}" alt="..."> Fox Learner</a>
+            <a class="btn btn-primary" href="{{url_for('pitch')}}" target="_blank">More Info</a>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center text-white">
+                        <!-- Page heading-->
+                        <h1 class="mb-5">Show your interest in FoxLearner</h1>
+                        <!-- Signup form-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form class="form-subscribe" id="contactForm" action="/submit" method="post">
+                            <!-- Email address input-->
+                            <div class="row" id="form11">
+                                <div class="">
+                                    <input class="form-control form-control-lg" id="emailAddress" type="email"
+                                        name="email" placeholder="Your Email Address" required />
+                                </div>
+                                <div class=""><button class="btn btn-primary btn-lg " id="submitButton"
+                                        type="submit">Interested</button></div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    <p>To activate this form, sign up at</p>
+                                    <a class="text-white"
+                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <div class="d-none" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">Error sending message!</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Icons Grid-->
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex"><i class="bi bi-lightbulb m-auto text-primary"></i>
+                        </div>
+                        <h3>Transformation</h3>
+                        <p class="lead mb-0">Transforming local education with the digital era!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                        <h3>Community</h3>
+                        <p class="lead mb-0">We are building a community of educators and aspirants!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                        <h3>Digitalization</h3>
+                        <p class="lead mb-0">Inspired to bring entire education on a single platform!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image Showcases-->
+    <section class="showcase">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                    style="background-image: url('{{url_for('static',filename='assets/img/transformation.jpg')}}')">
+                </div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Transformation</h2>
+                    <p class="lead mb-0">We are also transforming local education institutes with the digital era by
+                        equipping them with our robust model to provide the best education to every section of society
+                        at the best price!</p>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 text-white showcase-img"
+                    style="background-image: url('{{url_for('static',filename='assets/img/community.jpg')}}')"></div>
+                <div class="col-lg-6 my-auto showcase-text">
+                    <h2>Community</h2>
+                    <p class="lead mb-0">We are building a community of educators and aspirants. It will fill the gap
+                        between students and teachers also such a community will significantly increase the coordination
+                        between teachers and students that will inspire innovation!</p>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                    style="background-image: url('{{url_for('static',filename='assets/img/digital.jpg')}}')"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <h2>Digitalization</h2>
+                    <p class="lead mb-0">We are inspired to bring entire education on a single platform, where you can
+                        learn, enjoy and connect with lots of teachers and students around the globe that will help you
+                        to learn more apart from your syllabus!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials-->
+    <section class="testimonials text-center bg-light">
+        <div class="container">
+            <h2 class="mb-5">Our Hardworking Team</h2>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3"
+                            src="{{url_for('static',filename='assets/img/sagar_damai.jfif')}}" alt="Sagar Damai" />
+                        <h5><a href="https://www.linkedin.com/in/sagar-damai-5b86b0250/" target="_blank">Sagar Damai</a>
+                        </h5>
+                        <p class="font-weight-light mb-0">Co-founder and CEO</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-15">
+                        <img class="img-fluid rounded-circle mb-3"
+                            src="{{url_for('static',filename='assets/img/pratik_pandey.jpg')}}" alt="Pratik Pandey" />
+                        <h5><a href="https://www.linkedin.com/in/pratik-pandey-327238183" target="_blank">Pratik
+                                Pandey</a></h5>
+                        <p class="font-weight-light mb-0">Co-founder, MD & CMO</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3"
+                            src="{{url_for('static',filename='assets/img/abhi.jpg')}}" alt="Abhishek Gupta" />
+                        <h5><a href="https://www.linkedin.com/in/1abhi6/" target="_blank">Abhishek Gupta</a></h5>
+                        <p class="font-weight-light mb-0">Co-founder & CTO</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3"
+                            src="{{url_for('static',filename='assets/img/priya_choudhary.jpg')}}"
+                            alt="Priya Choudhary" />
+                        <h5><a href="https://www.linkedin.com/in/priya-choudhary-85b440254" target="_blank">Priya
+                                Choudhary</a></h5>
+                        <p class="font-weight-light mb-0">Co-founder & COO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Call to Action-->
+    <!-- <section class="call-to-action text-white text-center" id="signup">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <h2 class="mb-4">Interested in FoxLearner</h2>
+                     Signup form-->
+    <!-- * * * * * * * * * * * * * * *-->
+    <!-- * * SB Forms Contact Form * *-->
+    <!-- * * * * * * * * * * * * * * *-->
+    <!-- This form is pre-integrated with SB Forms.-->
+    <!-- To make this form functional, sign up at-->
+    <!-- https://startbootstrap.com/solution/contact-forms-->
+    <!-- to get an API token!
+                    <form class="form-subscribe" id="contactFormFooter">
+                     Email address input
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg" id="emailAddressBelow" type="email"
+                                    placeholder="Email Address" name="email" />
+                                <div class="invalid-feedback text-white">Email Address is required.</div>
+                                <div class="invalid-feedback text-white">Email Address Email is not valid.</div>
+                            </div>
+                            <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                    type="submit">Submit</button></div>
+                        </div>
+                         Submit success message-->
+    <!---->
+    <!-- This is what your users will see when the form-->
+    <!-- has successfully submitted
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <p>To activate this form, sign up at</p>
+                                <a class="text-white"
+                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                         Submit error message-->
+    <!---->
+    <!-- This is what your users will see when there is-->
+    <!-- an error submitting the form
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Footer-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+{% endblock %}
